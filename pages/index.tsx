@@ -26,7 +26,7 @@ for await (const req of s) {
   return (
     <>
       <Head>
-        <title>دينو - بيئة آمنية لتشغيل اكواد جافا سكريبت وتايب سكيبت تتميز </title>
+        <title>دينو - بيئة آمنة لتشغيل اكواد جافا سكريبت وتايب سكيبت تتميز </title>
       </Head>
       <CookieBanner />
       <div className="bg-white">
@@ -47,7 +47,7 @@ for await (const req of s) {
         </div>
         <div className="max-w-screen-sm mx-auto px-4 sm:px-6 md:px-8 mt-20">
           <p className="my-4 text-gray-700">
-            بيئة بسيطة، عصرية وآمنية لتشغيل اكواد جافا سكريبت وتايب سكريبت تستخدم محرك V8 مبنية على لغة Rust.
+            بيئة بسيطة، عصرية وآمنة لتشغيل اكواد جافا سكريبت وتايب سكريبت تستخدم محرك V8 مبنية على لغة Rust.
           </p>
           <ol className="ml-8 list-disc text-gray-700">
             <li>
@@ -128,16 +128,16 @@ for await (const req of s) {
           <p className="my-4 text-gray-700">
             تأتي دينو مع{" "}
             <Link href="/[...rest]" as="/manual">
-              <a className="link">a manual</a>
+              <a className="link">توثيق</a>
             </Link>{" "}
+
             which contains more in depth explanations about the more complex
             functions of the runtime, an introduction to the concepts that Deno
             is built on, details about the internals of Deno, how to embed Deno
             in your own application and how to extend Deno using Rust plugins.
           </p>
           <p className="my-4 text-gray-700">
-            The manual also contains information about the built in tools that
-            Deno provides.
+          ويحتوي التوثيق ايضا على معلومات حول الادوات المدمجة التي تتيحها دينو للمطورين
           </p>
         </div>
         <div className="max-w-screen-sm mx-auto px-4 sm:px-6 md:px-8 mt-20">
@@ -158,7 +158,7 @@ for await (const req of s) {
             </a>
           </p>
           <p className="my-4 text-gray-700">
-            These standard modules are hosted at{" "}
+            تتم استظافة الوحدات القياسية على{" "}
             <Link href="/[...rest]" as="/std">
               <a className="link">deno.land/std</a>
             </Link>{" "}
