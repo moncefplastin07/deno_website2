@@ -405,7 +405,7 @@ function Manual() {
                       </svg>
                     </div>
                     <div className="pl-6">
-                      <span className="inline sm:hidden">Search docs</span>
+                      <span className="inline sm:hidden">ابحث داخل التوثيقات</span>
                       <span className="hidden sm:inline">
                         Search the docs (press <InlineCode>/</InlineCode> to
                         focus)

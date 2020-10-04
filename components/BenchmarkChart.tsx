@@ -94,7 +94,7 @@ function BenchmarkChart(props: BenchmarkChartProps) {
 export function BenchmarkLoading() {
   return (
     <div style={{ height: 335 }} className="flex items-center justify-center">
-      <span className="text-gray-500">Loading...</span>
+      <span className="text-gray-500">انتظر قليلا...</span>
     </div>
   );
 }
