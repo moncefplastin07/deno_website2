@@ -26,7 +26,7 @@ for await (const req of s) {
   return (
     <>
       <Head>
-        <title>Deno - A secure runtime for JavaScript and TypeScript</title>
+        <title>دينو - بيئة آمنية لتشغيل اكواد جافا سكريبت وتايب سكيبت تتميز </title>
       </Head>
       <CookieBanner />
       <div className="bg-white">
@@ -37,32 +37,34 @@ for await (const req of s) {
               Deno
             </h1>
             <h2 className="mt-4 sm:mt-5 font-light text-2xl text-center leading-tight text-gray-900">
-              A <strong className="font-semibold">secure</strong> runtime for{" "}
-              <strong className="font-semibold">JavaScript</strong> and{" "}
-              <strong className="font-semibold">TypeScript</strong>.
+              
+              بيئة <strong className="font-semibold">آمنة</strong> لتشغيل  
+              
+              {" "}<strong className="font-semibold">JavaScript</strong>
+              {" "} و <strong className="font-semibold">TypeScript</strong>.
             </h2>
           </div>
         </div>
         <div className="max-w-screen-sm mx-auto px-4 sm:px-6 md:px-8 mt-20">
           <p className="my-4 text-gray-700">
+            بيئة بسيطة، عصرية وآمنية لتشغيل اكواد جافا سكريبت وتايب سكريبت تستخدم محرك V8 مبنية على لغة Rust
             Deno is a simple, modern and secure runtime for JavaScript and
             TypeScript that uses V8 and is built in Rust.
           </p>
           <ol className="ml-8 list-disc text-gray-700">
             <li>
-              Secure by default. No file, network, or environment access, unless
-              explicitly enabled.
+              .آمنة بشكل افتراضي، بحيث لا يمكن الوصول الى ملفات، الشبكة، البيئة ما لم يتم طلب تمكينها بشكل صريح
+              
             </li>
-            <li>Supports TypeScript out of the box.</li>
-            <li>Ships only a single executable file.</li>
+            <li>.تدعم تايب سكريبت بشكل افرتاضي</li>
+            <li>تعمل بملف تنفيذي واحد فقط.</li>
             <li>
-              Has built-in utilities like a dependency inspector (
-              <InlineCode>deno info</InlineCode>) and a code formatter (
+              تحتوي على أدوات مساعدة مدمجة (
+              <InlineCode>deno info</InlineCode>) و منسق الكود (
               <InlineCode>deno fmt</InlineCode>).
             </li>
             <li>
-              Has a set of reviewed (audited) standard modules that are
-              guaranteed to work with Deno:{" "}
+              لديها مجموعة من الوحدات القياسية التي يتم مراجعتها من طرف فريق تطوير دينو لتعمل بشكل جيد ودون مشاكل مع دينو:{" "}
               <a href="https://deno.land/std" className="link">
                 deno.land/std
               </a>
@@ -73,7 +75,7 @@ for await (const req of s) {
           <Link href="#installation">
             <a className="hover:underline">
               <h3 className="font-bold text-xl" id="installation">
-                Installation
+                التثبيت
               </h3>
             </a>
           </Link>
@@ -83,16 +85,16 @@ for await (const req of s) {
           <Link href="#getting-started">
             <a className="hover:underline">
               <h3 className="font-bold text-xl" id="getting-started">
-                Getting Started
+                البداية
               </h3>
             </a>
           </Link>
-          <p className="my-4 text-gray-700">Try running a simple program:</p>
+          <p className="my-4 text-gray-700">جرب تشغيل هذا البرنامج البسيط:</p>
           <CodeBlock
             code="deno run https://deno.land/std/examples/welcome.ts"
             language="bash"
           />
-          <p className="my-4 text-gray-700">Or a more complex one:</p>
+          <p className="my-4 text-gray-700">او جرب هذا المثال المعقد قليلا (خادم http):</p>
         </div>
         <div className="max-w-screen-sm mx-auto px-4 sm:px-6 md:px-8">
           <CodeBlock
@@ -103,10 +105,9 @@ for await (const req of s) {
         </div>
         <div className="max-w-screen-sm mx-auto px-4 sm:px-6 md:px-8">
           <p className="my-4 text-gray-700">
-            You can find a more in depth introduction, examples, and environment
-            setup guides in{" "}
-            <Link href="/[...rest]" as="/manual">
-              <a className="link">the manual</a>
+              لمشاهدة امثلة اخرى وكيفية تهيئة البيئة للتعامل مع دينو يمكنك زيارة صفحة الارشادات
+              <Link href="/[...rest]" as="/manual">
+              <a className="link"> من هنا </a>
             </Link>
             .
           </p>
@@ -115,7 +116,7 @@ for await (const req of s) {
           <Link href="#runtime-documentation">
             <a className="hover:underline">
               <h3 className="font-bold text-xl" id="runtime-documentation">
-                Runtime Documentation
+                واجهة برمجة التطبيقات 
               </h3>
             </a>
           </Link>
@@ -127,7 +128,7 @@ for await (const req of s) {
             .
           </p>
           <p className="my-4 text-gray-700">
-            Deno comes with{" "}
+            تأتي دينو مع{" "}
             <Link href="/[...rest]" as="/manual">
               <a className="link">a manual</a>
             </Link>{" "}
@@ -145,40 +146,39 @@ for await (const req of s) {
           <Link href="#standard-modules">
             <a className="hover:underline">
               <h3 className="font-bold text-xl" id="standard-modules">
-                Standard Modules
+                الوحدات القياسية
               </h3>
             </a>
           </Link>
           <p className="my-4 text-gray-700">
-            Next to the Deno runtime, Deno also provides a list of audited
-            standard modules that are reviewed by the Deno maintainers and are
-            guaranteed to work with a specific Deno version. These live
-            alongside the Deno source code in the{" "}
+            الوحدات القياسية هي   وحدات  يشرف على تدقيقها ومراجعتها فريق 
+            تطوير دينو لتكون مصمونة للعمل مع اصدار معين من دينو بدون اخطاء
+            وهي موجودة بجانب الكود المصدري لدينو في المستودع التالي
+            {" "}
             <a href="https://github.com/denoland/deno" className="link">
               denoland/deno
-            </a>{" "}
-            repository.
+            </a>
           </p>
           <p className="my-4 text-gray-700">
             These standard modules are hosted at{" "}
             <Link href="/[...rest]" as="/std">
               <a className="link">deno.land/std</a>
             </Link>{" "}
-            and are distributed via URLs like all other ES modules that are
-            compatible with Deno.
+            ويتم الوصول اليها معن طريق URL's معين مثلها مثل اي وحدات ES لتكون متوافة للعمل مع دينو
+            
           </p>
         </div>
         <div className="max-w-screen-sm mx-auto px-4 sm:px-6 md:px-8 mt-20">
           <Link href="#third-party-modules">
             <a className="hover:underline">
               <h3 className="font-bold text-xl" id="third-party-modules">
-                Third Party Modules
+                وحدات الطرف الثالث
               </h3>
             </a>
           </Link>
           <p className="my-4 text-gray-700">
-            Deno can import modules from any location on the web, like GitHub, a
-            personal webserver, or a CDN like{" "}
+            يمكن لدينو استيراد الوحدات الخارجية من اي مصدر من شبكة الويب، مثل GitHub، 
+            استظافة خاصة، او شبكة توصيل محتوى (CDN) مثل {" "}
             <a href="https://www.skypack.dev" className="link">
               Skypack
             </a>{" "}
@@ -189,18 +189,18 @@ for await (const req of s) {
             .
           </p>
           <p className="my-4 text-gray-700">
-            To make it easier to consume third party modules Deno provides some
-            built in tooling like <InlineCode>deno info</InlineCode> and{" "}
+            من اجل تسهيل استخدام وحدات الطرف الثالث توفر دينو بعض الادوات المدمجة مثل
+            <InlineCode>deno info</InlineCode> و{" "}
             <InlineCode>deno doc</InlineCode>. deno.land also provides a web UI
-            for viewing module documentation. It is available at{" "}
+            لمشاهدة توثيق هذه الوحدات. هو متاح على{" "}
             <a href="https://doc.deno.land" className="link">
               doc.deno.land
             </a>
             .
           </p>
           <p className="my-4 text-gray-700">
-            deno.land also provides a simple public hosting service for ES
-            modules that work with Deno. It can be found at{" "}
+            كما توفر دينو ايضا خدمة استظافة عامة ل وحدات ES التي تعمل مع دينو
+            . يمكنك مشاهداتها عبر{" "}
             <Link href="/x">
               <a className="link">deno.land/x</a>
             </Link>
@@ -218,7 +218,7 @@ for await (const req of s) {
 const InstallSection = () => {
   const shell = (
     <div key="shell" className="my-4 text-gray-700">
-      <p className="py-2">Shell (Mac, Linux):</p>
+      <p className="py-2">Shell (ماك, لينكس):</p>
       <CodeBlock
         language="bash"
         code={`curl -fsSL https://deno.land/x/install/install.sh | sh`}
@@ -231,14 +231,14 @@ const InstallSection = () => {
         <a href="https://formulae.brew.sh/formula/deno" className="link">
           Homebrew
         </a>{" "}
-        (Mac):
+        (ماك):
       </p>
       <CodeBlock language="bash" code={`brew install deno`} />
     </div>
   );
   const powershell = (
     <div key="powershell" className="my-4 text-gray-700">
-      <p className="mb-2">PowerShell (Windows):</p>
+      <p className="mb-2">PowerShell (ويندوز):</p>
       <CodeBlock
         language="bash"
         code={`iwr https://deno.land/x/install/install.ps1 -useb | iex`}
@@ -251,7 +251,7 @@ const InstallSection = () => {
         <a href="https://chocolatey.org/packages/deno" className="link">
           Chocolatey
         </a>{" "}
-        (Windows):
+        (ويندوز):
       </p>
       <CodeBlock language="bash" code={`choco install deno`} />
     </div>
@@ -262,7 +262,7 @@ const InstallSection = () => {
         <a href="https://scoop.sh/" className="link">
           Scoop
         </a>{" "}
-        (Windows):
+        (ويندوز):
       </p>
       <CodeBlock language="bash" code={`scoop install deno`} />
     </div>
@@ -270,7 +270,7 @@ const InstallSection = () => {
   const cargo = (
     <div key="cargo" className="my-4 text-gray-700">
       <p className="py-2">
-        Build and install from source using{" "}
+        او عبر{" "}
         <a href="https://crates.io/crates/deno" className="link">
           Cargo
         </a>
@@ -282,10 +282,9 @@ const InstallSection = () => {
   return (
     <>
       <p className="my-4 text-gray-700">
-        Deno ships as a single executable with no dependencies. You can install
-        it using the installers below, or download a release binary from the{" "}
+        يتم تثبيت دينو بملف تنفيذي واحد فقط اي انها لا تحتاج الى اي تبعيات. يمكنك تثبيت دينو عبر المثبتات الموضحة في الاسفل, او يمكنك تحميل الملف التنفيذي من{" "}
         <a href="https://github.com/denoland/deno/releases" className="link">
-          releases page
+          صفحة الاصدارات
         </a>
         .
       </p>
@@ -296,11 +295,11 @@ const InstallSection = () => {
       {scoop}
       {cargo}
       <p className="my-4 text-gray-700">
-        See{" "}
+        او يمكنك زياية{" "}
         <a className="link" href="https://github.com/denoland/deno_install">
           deno_install
         </a>{" "}
-        for more installation options.
+        لمزيد من خيارات التثبيت.
       </p>
     </>
   );

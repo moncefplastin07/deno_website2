@@ -7,6 +7,10 @@
 
 html {
   scroll-behavior: smooth;
+  direction: rtl;
+}
+pre, nav{
+  direction: ltr;
 }
 
 /* removes focus outlines on mouse clicks */

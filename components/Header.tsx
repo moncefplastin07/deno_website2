@@ -57,34 +57,8 @@ const Header = ({
             </svg>
           </button>
         </div>
-        <div className="hidden lg:flex md:ml-10 items-end">
-          <Link href="/" as="/#installation">
-            <a className="font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out">
-              Install
-            </a>
-          </Link>
-          <Link href="/[...rest]" as="/manual">
-            <a className="ml-10 font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out">
-              Manual
-            </a>
-          </Link>
-          <a
-            href="https://doc.deno.land/builtin/stable"
-            className="ml-10 font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out"
-          >
-            Runtime API
-          </a>
-          <Link href="/[...rest]" as="/std">
-            <a className="ml-10 font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out">
-              Standard Library
-            </a>
-          </Link>
-          <Link href="/x">
-            <a className="ml-10 font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out">
-              Third Party Modules
-            </a>
-          </Link>
-          <a
+        <div className="hidden lg:flex md:ml-10 items-end" dir="rtl">
+        <a
             href="https://github.com/denoland"
             className="ml-10 text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out"
           >
@@ -102,6 +76,33 @@ const Header = ({
               />
             </svg>
           </a>
+          <Link href="/" as="/#installation">
+            <a className="ml-10 font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out">
+              تثبيت
+            </a>
+          </Link>
+          <Link href="/[...rest]" as="/manual">
+            <a className="ml-10 font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out">
+              يدوي
+            </a>
+          </Link>
+          <a
+            href="https://doc.deno.land/builtin/stable"
+            className="ml-10 font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out"
+          >
+            واجهة برمجة التطبيقات
+          </a>
+          <Link href="/[...rest]" as="/std">
+            <a className="ml-10 font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out">
+              الوحدات القياسية
+            </a>
+          </Link>
+          <Link href="/x">
+            <a className="ml-10 font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out">
+              وحدات الطرف الثالث
+            </a>
+          </Link>
+          
         </div>
       </nav>
 
@@ -162,28 +163,28 @@ const Header = ({
               <div className="px-2 pt-4 pb-3">
                 <Link href="/" as="/#installation">
                   <a className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out">
-                    Install
+                   تثبيت
                   </a>
                 </Link>
                 <Link href="/[...rest]" as="/manual">
                   <a className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out">
-                    Manual
+                    يدوي
                   </a>
                 </Link>
                 <a
                   href="https://doc.deno.land/builtin/stable"
                   className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out"
                 >
-                  Runtime API
+                  واجهة برمجة تطبيقات اثناء التشغيل
                 </a>
                 <Link href="/[...rest]" as="/std">
                   <a className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out">
-                    Standard Library
+                    الوحدات القياسية
                   </a>
                 </Link>
                 <Link href="/x">
                   <a className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out">
-                    Third Party Modules
+                    وحدات الطرف الثالث
                   </a>
                 </Link>
               </div>
