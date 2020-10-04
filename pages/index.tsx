@@ -57,7 +57,7 @@ for await (const req of s) {
             <li>.تدعم تايب سكريبت بشكل افرتاضي</li>
             <li>تعمل بملف تنفيذي واحد فقط.</li>
             <li>
-              تحتوي على أدوات مساعدة مدمجة (
+              تحتوي على أدوات مساعدة مدمجة مثل عارض خريطة التبعات (
               <InlineCode>deno info</InlineCode>) و منسق الكود (
               <InlineCode>deno fmt</InlineCode>).
             </li>
@@ -128,13 +128,11 @@ for await (const req of s) {
           <p className="my-4 text-gray-700">
             تأتي دينو مع{" "}
             <Link href="/[...rest]" as="/manual">
-              <a className="link">توثيق</a>
+              <a className="link">صفحة ارشادات</a>
             </Link>{" "}
-
-            which contains more in depth explanations about the more complex
-            functions of the runtime, an introduction to the concepts that Deno
-            is built on, details about the internals of Deno, how to embed Deno
-            in your own application and how to extend Deno using Rust plugins.
+            تحتوي على شرح معمق لبعض الوظائق المعقدة بالاظافة الى شرح المفاهيم التي 
+            بنية عليها دينو وكيفية تشغيلها وتضمينها في تطبيقاتك والاستفادة من دوالها
+            الداخلية
           </p>
           <p className="my-4 text-gray-700">
           ويحتوي التوثيق ايضا على معلومات حول الادوات المدمجة التي تتيحها دينو للمطورين
@@ -197,7 +195,7 @@ for await (const req of s) {
             .
           </p>
           <p className="my-4 text-gray-700">
-            كما توفر دينو ايضا خدمة استظافة عامة ل وحدات ES التي تعمل مع دينو
+            كما توفر دينو ايضا خدمة استظافة عامة لوحدات ES التي تعمل مع دينو
             . يمكنك مشاهداتها عبر{" "}
             <Link href="/x">
               <a className="link">deno.land/x</a>
@@ -280,7 +278,7 @@ const InstallSection = () => {
   return (
     <>
       <p className="my-4 text-gray-700">
-        يتم تثبيت دينو بملف تنفيذي واحد فقط اي انها لا تحتاج الى اي تبعيات. يمكنك تثبيت دينو عبر المثبتات الموضحة في الاسفل, او يمكنك تحميل الملف التنفيذي من{" "}
+        يتم تثبيت دينو بملف تنفيذي واحد فقط اي انها لا تحتاج الى اي تبعيات اظافية. يمكنك تثبيت دينو عبر طرق التثبيت الموضحة في الاسفل, او يمكنك تحملها عى شكل ملف تنفيذي من{" "}
         <a href="https://github.com/denoland/deno/releases" className="link">
           صفحة الاصدارات
         </a>
@@ -293,7 +291,7 @@ const InstallSection = () => {
       {scoop}
       {cargo}
       <p className="my-4 text-gray-700">
-        او يمكنك زياية{" "}
+        او يمكنك زيارة{" "}
         <a className="link" href="https://github.com/denoland/deno_install">
           deno_install
         </a>{" "}

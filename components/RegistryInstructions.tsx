@@ -130,8 +130,7 @@ function RegistryInstructions(props: { isOpen: boolean; close: () => void }) {
                             for a specific version can never change.
                           </p>
                           <p className="text-base">
-                            Our service needs to get informed whenever a new tag
-                            is created. For this purpose we use GitHub webhooks.
+                            تحتاج خدمتنا الى اخذ المعلومات في كل مرة يتم فيها انشاء اصدار جديد لمستودع الوحدة على جيت هاب
                           </p>
                           <span className="block w-full rounded-md shadow-sm mt-4">
                             <button

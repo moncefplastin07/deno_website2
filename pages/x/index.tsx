@@ -70,11 +70,11 @@ const ThirdPartyRegistryList = () => {
   return (
     <>
       <Head>
-        <title>Third Party Modules | Deno</title>
+        <title>وحدات الطرف الثالث | Deno</title>
       </Head>
       <CookieBanner />
       <div className="bg-gray">
-        <Header subtitle="Third Party Modules" />
+        <Header subtitle="وحدات الطرف الثالث" />
         <RegistryInstructions
           isOpen={overlayOpen}
           close={() => setOverlayOpen(false)}
@@ -82,14 +82,11 @@ const ThirdPartyRegistryList = () => {
         <div>
           <div className="max-w-screen-lg mx-auto px-4 sm:px-6 md:px-8 mt-8">
             <dt className="text-lg leading-6 font-medium text-gray-900">
-              What is deno.land/x?
+              ماهي deno.land/x?
             </dt>
             <dd className="mt-2">
               <p className="text-base leading-6 text-gray-500">
-                <span className="font-semibold">deno.land/x</span> is a hosting
-                service for Deno scripts. It caches releases of open source
-                modules stored on GitHub and serves them at one easy to remember
-                domain.
+                <span className="font-semibold">deno.land/x</span> هي خدمة استظافة شيفرات دينو. تقوم بتخزين نسخ من اصدارات وحدات دينو المرفوعة على جيتهاب للحصول عليها عبر روابط فريدة وسهلة التذكر.
               </p>
             </dd>
 
@@ -101,7 +98,7 @@ const ThirdPartyRegistryList = () => {
           </div>
           <div className="max-w-screen-lg mx-auto px-4 sm:px-6 md:px-8 mt-8">
             <label htmlFor="query" className="font-medium sr-only">
-              Search
+              بحث
             </label>
             <input
               id="query"
@@ -167,14 +164,14 @@ const ThirdPartyRegistryList = () => {
                 <div className="bg-white px-4 py-3 flex items-center justify-between border-t border-gray-200 sm:px-6">
                   <div className="flex-1 flex justify-between items-center sm:hidden">
                     <button className="relative inline-flex items-center px-4 py-2 border border-gray-300 text-gray-100 text-sm leading-5 font-medium rounded-md bg-white">
-                      Previous
+                      السابق
                     </button>
                     <div className="text-base leading-6 text-gray-500">
                       <div className="h-3 w-4 bg-gray-100 inline-block mr-1" />/
                       <div className="h-3 w-4 bg-gray-100 inline-block ml-1" />
                     </div>
                     <button className="relative inline-flex items-center px-4 py-2 border border-gray-300 text-gray-100 text-sm leading-5 font-medium rounded-md bg-white ml-4">
-                      Next
+                      التالي
                     </button>
                   </div>
                   <div className="hidden sm:flex-1 sm:flex sm:items-center sm:justify-between">
@@ -235,13 +232,13 @@ const ThirdPartyRegistryList = () => {
               </div>
             ) : resp === null ? (
               <div className="p-4 text-center sm:text-left text-sm leading-5 font-medium text-gray-500 truncate">
-                Failed to load modules
+                فشل تحميل الوحدة
               </div>
             ) : (
               <div className="bg-white sm:shadow border border-gray-200 overflow-hidden sm:rounded-md mt-4">
                 {resp.results.length == 0 ? (
                   <div className="p-4 text-center sm:text-left text-sm leading-5 font-medium text-gray-500 truncate">
-                    No modules found
+                    لم يتم ايجاد اي وحدة
                   </div>
                 ) : (
                   <ModuleList
@@ -312,7 +309,7 @@ const ThirdPartyRegistryList = () => {
                                 <span className="font-medium">
                                   {resp.totalCount}
                                 </span>{" "}
-                                results
+                                النتائج
                               </p>
                             </div>
                             <div>
