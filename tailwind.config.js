@@ -1,3 +1,5 @@
+/* Copyright 2020 the Deno authors. All rights reserved. MIT license. */
+
 const defaultTheme = require("tailwindcss/defaultTheme"); // eslint-disable-line
 
 module.exports = {
@@ -18,7 +20,7 @@ module.exports = {
         sans: ["Inter var", ...defaultTheme.fontFamily.sans],
       },
       width: {
-        "72": "18rem",
+        72: "18rem",
       },
     },
   },

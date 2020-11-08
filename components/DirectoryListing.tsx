@@ -1,3 +1,5 @@
+/* Copyright 2020 the Deno authors. All rights reserved. MIT license. */
+
 import React, { useMemo, useState, createRef, useEffect } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -9,7 +11,7 @@ function DirectoryListing(props: {
   version: string | undefined;
   path: string;
   repositoryURL?: string | null;
-}) {
+}): React.ReactElement {
   const { asPath } = useRouter();
   const isStd = asPath.startsWith("/std");
   const children = useMemo(() => {

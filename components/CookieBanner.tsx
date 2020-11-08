@@ -1,6 +1,8 @@
+/* Copyright 2020 the Deno authors. All rights reserved. MIT license. */
+
 import React, { useState } from "react";
 
-export function CookieBanner() {
+export function CookieBanner(): React.ReactElement {
   const [cookieBanner, setCookieBanner] = useState(
     typeof window === "undefined" ||
       window.localStorage.getItem("cookiebanner") === "closed"
