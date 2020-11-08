@@ -102,9 +102,6 @@ function Header({
               وحدات الطرف الثالث
             </a>
           </Link>
-<<<<<<< HEAD
-          
-=======
           <a
             href="https://github.com/denoland"
             className="ml-10 text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out"
@@ -124,7 +121,6 @@ function Header({
               />
             </svg>
           </a>
->>>>>>> 894368bdb66211c5cd3d7109cd9c859b0cd3d1a0
         </div>
       </nav>
 
