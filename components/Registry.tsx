@@ -505,7 +505,7 @@ function Registry(): React.ReactElement {
                     </div>
 
                     <div className="max-w-sm w-full shadow-sm rounded-lg border border-gray-200 p-4">
-                      <p className="text-md font-semibold mb-2">Version Info</p>
+                      <p className="text-md font-semibold mb-2">معلومات الاصدار</p>
                       {versionMeta === undefined ? (
                         <div className="mt-2 flex items-center py-0.5">
                           <svg
