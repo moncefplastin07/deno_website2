@@ -1,6 +1,8 @@
+/* Copyright 2020 the Deno authors. All rights reserved. MIT license. */
+
 import React, { useState } from "react";
 
-export function CookieBanner() {
+export function CookieBanner(): React.ReactElement {
   const [cookieBanner, setCookieBanner] = useState(
     typeof window === "undefined" ||
       window.localStorage.getItem("cookiebanner") === "closed"
@@ -20,7 +22,7 @@ export function CookieBanner() {
                     نحن نستخدم ملفات تعريف الارتباط الوظيفية.
                   </span>
                   <span className="hidden md:inline">
-                    لنضمن حصولك على تجربة مستخدم جيدة, نحن نستخدم ملفات تعريف الارتباط الوظيفية.
+                    لنضمن حصولك على تجربة استخدامل جيدة, نحن نستخدم ملفات تعريف الارتباط الوظيفية.
                   </span>
                 </p>
               </div>

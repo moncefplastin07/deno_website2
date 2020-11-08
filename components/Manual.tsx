@@ -1,3 +1,5 @@
+/* Copyright 2020 the Deno authors. All rights reserved. MIT license. */
+
 import React, {
   useState,
   useEffect,
@@ -9,7 +11,7 @@ import { createPortal } from "react-dom";
 import Head from "next/head";
 import Link from "next/link";
 import { useRouter, Router } from "next/router";
-// @ts-expect-error
+// @ts-expect-error because @docsearch/react does not have types
 import { DocSearchModal, useDocSearchKeyboardEvents } from "@docsearch/react";
 import versionMeta from "../versions.json";
 import { parseNameVersion } from "../util/registry_utils";
@@ -39,12 +41,12 @@ function Hit({
   );
 }
 
-function Manual() {
+function Manual(): React.ReactElement {
   const { query, push, replace } = useRouter();
   const { version, path } = useMemo(() => {
     const [identifier, ...pathParts] = (query.rest as string[]) ?? [];
     const path = pathParts.length === 0 ? "" : `/${pathParts.join("/")}`;
-    const [_, version] = parseNameVersion(identifier ?? "");
+    const version = parseNameVersion(identifier ?? "")[1] ?? versionMeta.cli[0];
     return { version, path: path || "/introduction" };
   }, [query]);
 

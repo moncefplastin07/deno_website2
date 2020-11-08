@@ -1,5 +1,7 @@
 /* eslint-env jest */
 
+/* Copyright 2020 the Deno authors. All rights reserved. MIT license. */
+
 import {
   getSourceURL,
   VersionMetaInfo,
@@ -111,7 +113,6 @@ test("getModule", async () => {
   expect(await getModule("ltest2")).toEqual({
     name: "ltest2",
     description: "Move along, just for testing",
-    // eslint-disable-next-line @typescript-eslint/camelcase
     star_count: 2,
   });
 });

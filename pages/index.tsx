@@ -43,6 +43,13 @@ for await (const req of s) {
               {" "}<strong className="font-semibold">JavaScript</strong>
               {" "} و <strong className="font-semibold">TypeScript</strong>.
             </h2>
+
+            <a
+              href="https://github.com/denoland/deno/releases/latest"
+              className="rounded-full mt-4 px-8 py-2 bg-blue-500 text-white shadow-lg"
+            >
+              {versions.cli[0]}
+            </a>
           </div>
         </div>
         <div className="max-w-screen-sm mx-auto px-4 sm:px-6 md:px-8 mt-20">
@@ -177,10 +184,14 @@ for await (const req of s) {
             استظافة خاصة، او شبكة توصيل محتوى (CDN) مثل {" "}
             <a href="https://www.skypack.dev" className="link">
               Skypack
-            </a>{" "}
-            or{" "}
+            </a>
+            ,{" "}
             <a href="https://jspm.io" className="link">
               jspm.io
+            </a>{" "}
+            or{" "}
+            <a href="https://www.jsdelivr.com/" className="link">
+              jsDelivr
             </a>
             .
           </p>

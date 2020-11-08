@@ -1,7 +1,9 @@
+/* Copyright 2020 the Deno authors. All rights reserved. MIT license. */
+
 import React from "react";
 import Head from "next/head";
 
-function LoadingPage() {
+function LoadingPage(): React.ReactElement {
   return (
     <div>
       <Head>
