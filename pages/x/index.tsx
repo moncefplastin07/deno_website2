@@ -105,7 +105,7 @@ function ThirdPartyRegistryList(): React.ReactElement {
               className="block w-full px-4 py-2 leading-normal bg-white border border-gray-200 rounded-lg outline-none shadow hover:shadow-sm focus:shadow-sm appearance-none focus:border-gray-300 hover:border-gray-300 mt-1"
               type="text"
               placeholder={
-                !resp ? "Search" : `Search through ${resp.totalCount} modules`
+                !resp ? "ابحث" : `ابحث بين ${resp.totalCount} وحدة`
               }
               value={query}
               onChange={handleSearchInput}
@@ -277,7 +277,7 @@ function ThirdPartyRegistryList(): React.ReactElement {
                                   : "text-gray-500 cursor-default"
                               } transition ease-in-out duration-150`}
                             >
-                              Previous
+                              السابق
                             </button>
                             <div className="text-base leading-6 text-gray-500">
                               {page}/{pageCount}
@@ -291,25 +291,25 @@ function ThirdPartyRegistryList(): React.ReactElement {
                                   : "text-gray-500 cursor-default"
                               } transition ease-in-out duration-150`}
                             >
-                              Next
+                              التالي
                             </button>
                           </div>
                           <div className="hidden sm:flex-1 sm:flex sm:items-center sm:justify-between">
                             <div>
                               <p className="text-sm leading-5 text-gray-700">
-                                Showing{" "}
+                                {" "}
                                 <span className="font-medium">
                                   {(page - 1) * PER_PAGE + 1}
                                 </span>{" "}
-                                to{" "}
+                                -{" "}
                                 <span className="font-medium">
                                   {(page - 1) * PER_PAGE + resp.results.length}
                                 </span>{" "}
-                                of{" "}
+                                من اصل{" "}
                                 <span className="font-medium">
                                   {resp.totalCount}
                                 </span>{" "}
-                                النتائج
+                                من النتائج
                               </p>
                             </div>
                             <div>
@@ -468,45 +468,43 @@ function ThirdPartyRegistryList(): React.ReactElement {
               <div>
                 <div>
                   <dt className="text-lg leading-6 font-medium text-gray-900">
-                    How do I use modules on deno.land/x?
+                    كيف يمكنني استخدام الوحدات الموجودة على deno.land/x?
                   </dt>
                   <dd className="mt-2">
                     <p className="text-base leading-6 text-gray-500 break-words">
-                      The basic format of code URLs is
+                      التنسيق الاساسي لعناوين URL الخاصة بالوحدات المستضافة على deno.land/x هو كالتالي 
                       <InlineCode>
                         https://deno.land/x/IDENTIFIER@VERSION/FILE_PATH
                       </InlineCode>
-                      . If you leave out the version it will be defaulted to the
-                      most recent version released for the module.
+                      . اذا لم تحدد الاصدار فانه سيتم اخيار اخر اصدار للوحدة كاصدار افتراضي.
                     </p>
                   </dd>
                 </div>
                 <div className="mt-12">
                   <dt className="text-lg leading-6 font-medium text-gray-900">
-                    Can I find functionality built-in to Deno here?
+                    هل يمكنني ايجاد وضائف دينو المدمجة هنا؟
                   </dt>
                   <dd className="mt-2">
                     <p className="text-base leading-6 text-gray-500">
-                      No, the built-in runtime is documented on{" "}
+                      لا, وصائف اثناء التشغيل المدمجة موثقة في{" "}
                       <a className="link" href="https://doc.deno.land/">
-                        deno doc
+                        توثيق دينو
                       </a>{" "}
-                      and in the manual. See{" "}
+                      كما يمكنك ايضا مشاهدة التوثيق الاساسي. او{" "}
                       <Link href="/[identifier]" as="/std">
                         <a className="link">/std</a>
                       </Link>{" "}
-                      for the standard modules.
+                      المخصص للوحدات القياسية.
                     </p>
                   </dd>
                 </div>
                 <div className="mt-12">
                   <dt className="text-lg leading-6 font-medium text-gray-900">
-                    How do I add a module to deno.land/x?
+                    كيف يمكنني اظافة وحدة الى deno.land/x?
                   </dt>
                   <dd className="mt-2">
                     <p className="text-base leading-6 text-gray-500 break-words">
-                      Press the button below and follow the presented
-                      instructions:
+                      اظغط على الزر في الاسفل ثم تابع ال الخطوات الموضحة:
                     </p>
                     <span className="block w-full rounded-md shadow-sm mt-4">
                       <button
@@ -514,7 +512,7 @@ function ThirdPartyRegistryList(): React.ReactElement {
                         className="w-full flex justify-center py-2 px-4 border border-gray-300 text-md font-medium rounded-md text-gray-700 bg-gray-100 hover:text-gray-500 hover:bg-gray-50 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 active:bg-gray-100 active:text-gray-700 transition duration-150 ease-in-out"
                         onClick={() => setOverlayOpen(true)}
                       >
-                        Add a module
+                        أصف وحدة
                       </button>
                     </span>
                   </dd>
@@ -526,34 +524,29 @@ function ThirdPartyRegistryList(): React.ReactElement {
                     className="text-lg leading-6 font-medium text-gray-900"
                     id="warning"
                   >
-                    I am getting a warning when importing from deno.land/x!
+                    اتلقى تحذيرا عندما اقوم باستيراد وحدة من على deno.land/x!
                   </dt>
                   <dd className="mt-2">
                     <p className="text-base leading-6 text-gray-500">
-                      deno.land/x warns you when you are implicitly importing
-                      the latest version of a module (when you do not explicitly
-                      specify a version). This is because it can{" "}
+                    يتم تحذيرك عند القيام باستيراد وتضمين اخر اصدار من وحدة ما موجودة على deno.land/x . هذا لانه يمكن {" "}
                       <a
                         href="https://github.com/denoland/deno_website2/issues/997"
                         className="link"
                       >
-                        be unsafe to not tag dependencies
+                        ان يكون غير آمن اذا لم تقم بتحديد العلامة او الاصدار بشكل صريح
                       </a>
-                      . To get rid of the warning, explicitly specify a version.
+                      . للتخصل من التحذير قم بتحديد الاصدار الذي تود استخدمه بشكل صريح اثناء تظمينك للوحدة.
                     </p>
                   </dd>
                 </div>
                 <div className="mt-12">
                   <dt className="text-lg leading-6 font-medium text-gray-900">
-                    Can I edit or remove a module on deno.land/x?
+                    هل يمكنني حذف او تعديل وحدة موجودة على deno.land/x?
                   </dt>
                   <dd className="mt-2">
                     <p className="text-base leading-6 text-gray-500">
-                      Module versions are persistent and immutable. It is thus
-                      not possible to edit or delete a module (or version), to
-                      prevent breaking programs that rely on this module.
-                      Modules may be removed if there is a legal reason to do
-                      (for example copyright infringement).
+                      اصدارات الوحدات ثابتة وغير قابلة للتحديث. اي لا يمكن حذف او تعديل اي وحدة (او اصدار), لمنع توقف البرامج التي تعتمد على هذه الوحدات.
+                      لكن يمكن ان يمكن حذف الوحدات اذا كان هناك سبب قانوني يستدعي ذلك (كانتهاك حقوق المؤلف)
                     </p>
                   </dd>
                 </div>
@@ -562,12 +555,12 @@ function ThirdPartyRegistryList(): React.ReactElement {
           </div>
           <div className="max-w-screen-lg mx-auto pt-4 pb-8 sm:pt-8 sm:pb-12 px-4 sm:px-6 lg:pt-12 lg:pb-16 lg:px-8">
             <h4 className="font-semibold text-2xl" id="stats">
-              Stats
+              احصائيات
             </h4>
             {stats ? (
               <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-8">
                 <div>
-                  <h5 className="font-medium text-lg">New modules</h5>
+                  <h5 className="font-medium text-lg">الوحدات الجديدة</h5>
                   <div className="bg-white sm:shadow border border-gray-200 overflow-hidden rounded-md mt-2">
                     <ModuleList
                       modules={stats.recently_added_modules.map((v) => ({
@@ -580,7 +573,7 @@ function ThirdPartyRegistryList(): React.ReactElement {
                   </div>
                 </div>
                 <div>
-                  <h5 className="font-medium text-lg">Recently updated</h5>
+                  <h5 className="font-medium text-lg">وحدات تم تحديثها مؤخرا</h5>
                   <div className="bg-white sm:shadow border border-gray-200 overflow-hidden rounded-md mt-2">
                     <ModuleList
                       modules={stats.recently_uploaded_versions.map((v) => ({
@@ -632,7 +625,7 @@ function ModuleList({
                             replaceEmojis(meta.description)
                           ) : (
                             <span className="italic text-gray-400">
-                              No description
+                              بدون وصف
                             </span>
                           )}
                         </span>

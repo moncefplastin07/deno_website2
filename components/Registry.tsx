@@ -545,7 +545,7 @@ function Registry(): React.ReactElement {
                     {documentationURL && externalDependencies !== null ? (
                       <div className="max-w-sm w-full shadow-sm rounded-lg border border-gray-200 p-4">
                         <p className="text-md font-semibold mb-2">
-                          External Dependencies
+                        التبعيات الخارجية
                         </p>
                         {externalDependencies === undefined ? (
                           <>
@@ -595,11 +595,11 @@ function Registry(): React.ReactElement {
                             </div>
                             <div className="text-sm mt-2 italic">
                               {externalDependencies.length === 0
-                                ? "No external dependencies 🎉"
+                                ? "لا يتظمن اي تبعيات خارجية 🎉"
                                 : externalDependencies.length +
                                   (externalDependencies.length === 1
-                                    ? " external dependency"
-                                    : " external dependencies")}
+                                    ? " تعبية خارجية"
+                                    : " تبعيات خارجية")}
                             </div>
                           </>
                         )}
@@ -720,7 +720,7 @@ function VersionSelector({
   return (
     <div className="gap-2 w-full">
       <label htmlFor="version" className="sr-only">
-        Version
+        الاصدار
       </label>
       <div className="max-w-xs rounded-md shadow-sm w-full">
         {versions ? (
@@ -756,7 +756,7 @@ function VersionSelector({
           aria-label="Go to latest version"
           onClick={() => onChange(versions[0])}
         >
-          اخر اصدار
+          آخر اصدار
         </button>
       ) : null}
     </div>
