@@ -20,13 +20,12 @@ function TranslationsPage(): React.ReactElement {
         <div className="max-w-screen-lg mx-auto">
           <h4 className="text-4xl font-bold tracking-tight">Translations</h4>
           <p className="mt-4 text-lg">
-            Deno docs is available in the following languages. Do you have a
-            piece to display here?{" "}
+            يتوفر توثيق دينو بالللغات التالية. هل تريد المساهمة بترجمة التوثيق الى لغة ما؟?{" "}
             <a
               href="https://github.com/denoland/deno_website2/blob/master/translations.json"
               className="link"
             >
-              Add it!
+              اضفها من هنا!
             </a>
           </p>
         </div>

@@ -123,16 +123,14 @@ function RegistryInstructions(props: {
                       {stage === 0 && (
                         <>
                           <p className="text-base">
-                            All modules on{" "}
+                            كل الوحدات الموجودة في {" "}
                             <b className="font-semibold">deno.land/x</b> need to
-                            be hosted as public repositories on GitHub.com.
+                            هي مستودعات عامة مستضافة على منصة GitHub.com.
                           </p>
                           <p className="text-base">
                             <b className="font-semibold">deno.land/x</b>{" "}
-                            downloads and stores your repository contents every
-                            time you create a git tag. We only do this once for
-                            every tag. This ensures that the contents we serve
-                            for a specific version can never change.
+                            نحن نقوم بتحميل وتخزين محتويات المستودع الخاص بك كل مرة تقوم فيها بانشاء علامة او اصدار . لمرة واحدة فقط
+                            لنظمن عدم تغير محتوى اي اصدار تقوم بانشاءه.
                           </p>
                           <p className="text-base">
                             تحتاج خدمتنا الى اخذ المعلومات في كل مرة يتم فيها انشاء اصدار جديد لمستودع الوحدة على جيت هاب
@@ -143,20 +141,20 @@ function RegistryInstructions(props: {
                               className="w-full flex justify-center py-2 px-4 mt-12 border border-gray-300 text-md font-medium rounded-md text-gray-700 bg-gray-100 hover:text-gray-500 hover:bg-gray-50 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 active:bg-gray-100 active:text-gray-700 transition duration-150 ease-in-out"
                               onClick={() => setStage(1)}
                             >
-                              Next
+                              التالي
                             </button>
                           </span>
                         </>
                       )}
                       {stage === 1 && (
                         <>
-                          <p>To get started please select a module name:</p>
+                          <p>للبدء يرجى تحديد اسم الوحدة:</p>
                           <div>
                             <label
                               htmlFor="modulename"
                               className="font-semibold sr-only"
                             >
-                              Module Name
+                              اسم الوحدة
                             </label>
                             <input
                               id="modulename"
@@ -170,25 +168,23 @@ function RegistryInstructions(props: {
                                   : ""
                               }`}
                               type="text"
-                              placeholder="Module Name"
+                              placeholder="اسم الوحدة"
                               value={moduleName}
                               onChange={(e) => setModuleName(e.target.value)}
                             />
                             {isModuleNameAvailable === true ? (
                               <p className="text-green-500 mb-2">
-                                This module name is available.
+                                هذه الوحدة موجودة بالفعل.
                               </p>
                             ) : isModuleNameAvailable === false ? (
                               <p className="text-red-400 mb-2">
-                                This module name is not available for a new
-                                author. If this module is already registered to
-                                your name, press Next.
+                                اسم هذه الوحدة موجود بالفعل وهو غير متاح لمؤلف اخر. اذا كانت هذه الوحدة مسجلة باسمك, اظغط على التالي.
                               </p>
                             ) : null}
                             {!isModuleNameValid ? (
                               <span className="text-red-400">
-                                The module name must be between 3 and 40
-                                characters and contain only the characters a-z,
+                                يجب ان يتكون اسم الوحدة من 3 الى 40
+                                كما يجب ان يحتوي الا على الاحرف من a الى z . (_) او الارقام من 0 الى 9 او الشارطة السفلية فقط characters a-z,
                                 0-9 and _.
                               </span>
                             ) : null}
@@ -204,25 +200,25 @@ function RegistryInstructions(props: {
                               } focus:outline-none focus:shadow-outline-blue focus:border-blue-300 active:bg-gray-100 active:text-gray-700 transition duration-150 ease-in-out`}
                               onClick={() => setStage(2)}
                             >
-                              Next
+                              التالي
                             </button>
                           </span>
                           <button className="link" onClick={() => setStage(0)}>
-                            Previous
+                            السابق
                           </button>
                         </>
                       )}
                       {stage === 2 && (
                         <>
                           <p>
-                            There are some more optional settings to set up:
+                            اعدادات اظافية (اختيارية):
                           </p>
                           <div className="mt-2">
                             <label
                               htmlFor="subdirectory"
                               className="font-medium"
                             >
-                              Subdirectory
+                              مجلد فرعي
                             </label>
                             <input
                               id="subdirectory"
@@ -264,32 +260,31 @@ function RegistryInstructions(props: {
                             text-gray-700 bg-gray-100 hover:text-gray-500 hover:bg-gray-50 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 active:bg-gray-100 active:text-gray-700 transition duration-150 ease-in-out`}
                               onClick={() => setStage(3)}
                             >
-                              Next
+                              التالي
                             </button>
                           </span>
                           <button className="link" onClick={() => setStage(1)}>
-                            Previous
+                            السابق
                           </button>
                         </>
                       )}
                       {stage === 3 && (
                         <>
-                          <p>You can now add the webhook to your repository.</p>
+                          <p>يمكنك اظافة حدث webhook الى مستودعك على GitHub باتباع المراحل التالية.</p>
                           <ol className="list-decimal list-outside ml-4 pl-2 ">
-                            <li>Navigate to the repository you want to add.</li>
+                            <li>انتقل الى المستود الذي تريد اظافته.</li>
                             <li>
-                              Go to the <InlineCode>Settings</InlineCode> tab.
+                              اذهب الىالاعدادات <InlineCode>Settings</InlineCode>.
                             </li>
                             <li>
-                              Click on the <InlineCode>Webhooks</InlineCode>{" "}
-                              tab.
+                              اظغط على <InlineCode>Webhooks</InlineCode>{" "}
                             </li>
                             <li>
-                              Click on the <InlineCode>Add webhook</InlineCode>{" "}
-                              button.
+                              اظغط على زر<InlineCode>Add webhook</InlineCode>{" "}
+                              .
                             </li>
                             <li>
-                              Enter the URL{" "}
+                              ادخل الرابط التالي{" "}
                               <InlineCode>
                                 https://api.deno.land/webhook/gh/{moduleName}
                                 {subdirectory
@@ -298,25 +293,25 @@ function RegistryInstructions(props: {
                                     )}`
                                   : ""}
                               </InlineCode>{" "}
-                              in the payload URL field.
+                              في حقل ال payload URL.
                             </li>
                             <li>
-                              Select <InlineCode>application/json</InlineCode>{" "}
-                              as the content type.
+                              اختر <InlineCode>application/json</InlineCode>{" "}
+                              كنوع للمحتوى المراد استقباله.
                             </li>
                             <li>
-                              Select{" "}
+                              اختر{" "}
                               <InlineCode>
                                 Let me select individual events.
                               </InlineCode>
                             </li>
                             <li>
-                              Select only the{" "}
+                              حدد {" "}
                               <InlineCode>Branch or tag creation</InlineCode>{" "}
-                              event.
+                              تاكد من عدم تحديد اي خيار اخر.
                             </li>
                             <li>
-                              Press <InlineCode>Add webhook</InlineCode>.
+                              ثم اظغط <InlineCode>Add webhook</InlineCode>.
                             </li>
                           </ol>
                           <video
@@ -329,29 +324,27 @@ function RegistryInstructions(props: {
                           <div className="mt-2">
                             {isModuleNameAvailable ? (
                               <div className="text-gray-800 p-2 bg-gray-50 rounded-md border border-gray-200">
-                                Waiting to receive initial WebHook event from
+                                نحن ننتظر استلام حدث WebHook مبدئي من
                                 GitHub...
                               </div>
                             ) : (
                               <>
                                 <div className="text-green-800 p-2 bg-gray-50 rounded-md border border-green-200">
-                                  Module successfully registered! To upload a
-                                  version, create a new tag / release in the
-                                  repository.
+                                  تم تسجيل الوحدة بنجاح! لرفع الوحد هنا, قم بانشاء علامة او اصدار جديد من مستودعك.
                                 </div>
                                 <div className="mt-4 rounded-md shadow-sm">
                                   <button
                                     className="w-full flex justify-center py-2 px-4 mt-12 border border-gray-300 text-md font-medium rounded-md text-gray-700 bg-gray-100 hover:text-gray-500 hover:bg-gray-50 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 active:bg-gray-100 active:text-gray-700 transition duration-150 ease-in-out"
                                     onClick={props.close}
                                   >
-                                    Done
+                                    انتها!
                                   </button>
                                 </div>
                               </>
                             )}
                           </div>
                           <button className="link" onClick={() => setStage(2)}>
-                            Previous
+                            السابق
                           </button>
                         </>
                       )}

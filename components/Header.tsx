@@ -189,12 +189,12 @@ function Header({
                     توثيق
                   </a>
                 </Link>
-                <a
-                  href="https://doc.deno.land/builtin/stable"
-                  className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out"
-                >
-                  واجهة برمجة تطبيقات اثناء التشغيل
-                </a>
+                  <a
+                    href="https://doc.deno.land/builtin/stable"
+                    className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out"
+                  >
+                    واجهة برمجة تطبيقات
+                  </a>
                 <Link href="/[...rest]" as="/std">
                   <a className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out">
                     الوحدات القياسية
