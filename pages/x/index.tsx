@@ -74,11 +74,7 @@ function ThirdPartyRegistryList(): React.ReactElement {
       </Head>
       <CookieBanner />
       <div className="bg-gray">
-<<<<<<< HEAD
         <Header subtitle="وحدات الطرف الثالث" />
-=======
-        <Header subtitle="Third Party Modules" widerContent={true} />
->>>>>>> 892750b99cc260f8b1b2a4bcea59eab9101dd67c
         <RegistryInstructions
           isOpen={overlayOpen}
           close={() => setOverlayOpen(false)}
