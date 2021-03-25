@@ -20,7 +20,7 @@ export default class DenoDocDocument extends Document {
 
   render(): React.ReactElement {
     return (
-      <Html lang="en">
+      <Html lang="ar">
         <Head>
           <meta name="twitter:site" content="@deno_land" />
           <meta name="twitter:creator" content="@deno_land" />

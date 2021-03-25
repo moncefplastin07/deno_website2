@@ -61,7 +61,7 @@ for await (const req of s) {
           <p className="my-4 text-gray-700">
             بيئة بسيطة، عصرية وآمنة لتشغيل اكواد جافا سكريبت وتايب سكريبت تستخدم محرك V8 مبنية على لغة Rust.
           </p>
-          <ol className="ml-8 list-disc text-gray-700">
+          <ol className="mr-8 list-disc text-gray-700">
             <li>
               .آمنة بشكل إفتراضي، بحيث لا يمكن الوصول الى ملفات، الشبكة، البيئة ما لم يتم طلب تمكينها بشكل صريح
               
