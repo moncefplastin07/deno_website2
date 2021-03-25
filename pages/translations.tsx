@@ -22,7 +22,7 @@ function TranslationsPage(): React.ReactElement {
           <p className="mt-4 text-lg">
             يتوفر توثيق دينو بالللغات التالية. هل تريد المساهمة بترجمة التوثيق الى لغة ما؟?{" "}
             <a
-              href="https://github.com/denoland/deno_website2/blob/master/translations.json"
+              href="https://github.com/denoland/deno_website2/blob/main/translations.json"
               className="link"
             >
               اضفها من هنا!

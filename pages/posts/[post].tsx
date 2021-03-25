@@ -14,7 +14,7 @@ import Link from "next/link";
 import { CookieBanner } from "../../components/CookieBanner";
 
 const postPath =
-  "https://github.com/denoland/deno_website2/blob/master/public/posts/";
+  "https://github.com/denoland/deno_website2/blob/main/public/posts/";
 
 interface Props {
   markdown: string;
@@ -100,7 +100,7 @@ function NewsPostPage(props: Props): React.ReactElement {
         <Link href="/posts">
           <a className="link">&lt;- Other News</a>
         </Link>
-        <h1 className="tracking-tight font-bold text-5xl leading-10 mt-4 py-8">
+        <h1 className="tracking-tight font-bold text-4xl mt-4 py-8">
           {props.meta.title}
         </h1>
         <a

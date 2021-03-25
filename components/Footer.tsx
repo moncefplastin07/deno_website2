@@ -8,11 +8,11 @@ const Footer = (props: { simple?: boolean }) => (
     className={props.simple ? undefined : "bg-gray-50 border-t border-gray-200"}
   >
     <div className="max-w-screen-xl mx-auto py-12 px-4 overflow-hidden sm:px-6 lg:px-8">
-      <nav className="-mx-5 -my-2 flex flex-wrap justify-center" dir='rtl'>
+      <nav className="-mx-5 -my-2 flex flex-wrap justify-center">
         <div className="px-5 py-2">
           <Link href="/[...rest]" as="/manual">
             <a className="text-base leading-6 text-gray-500 hover:text-gray-900">
-              توثيق
+              التوثيق
             </a>
           </Link>
           </div>
@@ -27,7 +27,7 @@ const Footer = (props: { simple?: boolean }) => (
         <div className="px-5 py-2">
           <Link href="/[...rest]" as="/std">
             <a className="text-base leading-6 text-gray-500 hover:text-gray-900">
-              المكتبات القياسية
+              الوحدات القياسية
             </a>
           </Link>
         </div>
@@ -66,6 +66,14 @@ const Footer = (props: { simple?: boolean }) => (
             </a>
           </Link>
         </div>
+        <div className="px-5 py-2">
+          <a
+            href="https://status.deno.land/"
+            className="text-base leading-6 text-gray-500 hover:text-gray-900"
+          >
+            حالة النظام
+          </a>
+        </div>
       </nav>
       <div className="mt-9 flex justify-center">
         <a
@@ -85,28 +93,28 @@ const Footer = (props: { simple?: boolean }) => (
             <img
               className="m-2 opacity-75"
               alt="denoland/rusty_v8 CI"
-              src="https://img.shields.io/github/workflow/status/denoland/rusty_v8/ci/master?label=rusty_v8&logo=github"
+              src="https://img.shields.io/github/workflow/status/denoland/rusty_v8/ci/main?label=rusty_v8&logo=github"
+            />
+          </a>
+          <a href="https://github.com/denoland/deno_lint">
+            <img
+              className="m-2 opacity-75"
+              alt="denoland/deno_lint CI"
+              src="https://img.shields.io/github/workflow/status/denoland/deno_lint/ci/main?label=deno_lint&logo=github"
+            />
+          </a>
+          <a href="https://github.com/denoland/deno_doc">
+            <img
+              className="m-2 opacity-75"
+              alt="denoland/deno_doc CI"
+              src="https://img.shields.io/github/workflow/status/denoland/deno_doc/ci/main?label=deno_doc&logo=github"
             />
           </a>
           <a href="https://github.com/denoland/deno_website2">
             <img
               className="m-2 opacity-75"
               alt="denoland/deno_website2 CI"
-              src="https://img.shields.io/github/workflow/status/denoland/deno_website2/ci/master?label=deno_website2&logo=github"
-            />
-          </a>
-          <a href="https://github.com/denoland/doc_website">
-            <img
-              className="m-2 opacity-75"
-              alt="denoland/doc_website CI"
-              src="https://img.shields.io/github/workflow/status/denoland/doc_website/ci/master?label=doc_website&logo=github"
-            />
-          </a>
-          <a href="https://github.com/denoland/deno_install">
-            <img
-              className="m-2 opacity-75"
-              alt="denoland/deno_install CI"
-              src="https://img.shields.io/github/workflow/status/denoland/deno_install/ci/master?label=deno_install&logo=github"
+              src="https://img.shields.io/github/workflow/status/denoland/deno_website2/ci/main?label=deno_website2&logo=github"
             />
           </a>
         </div>

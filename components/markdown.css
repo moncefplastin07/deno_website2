@@ -534,16 +534,6 @@ object {
   border: 0;
 }
 
-.markdown .highlight {
-  margin-bottom: 16px;
-}
-
-.markdown .highlight pre:not(.prism-code) {
-  margin-bottom: 0;
-  word-break: normal;
-}
-
-.markdown .highlight pre:not(.prism-code),
 .markdown pre:not(.prism-code) {
   padding: 0 16px;
   overflow: auto;
@@ -571,6 +561,5 @@ object {
 .markdown-posts h4,
 .markdown-posts h5,
 .markdown-posts h6 {
-  line-height: 1;
   margin-top: 40px;
 }

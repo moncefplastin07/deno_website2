@@ -74,7 +74,11 @@ function ThirdPartyRegistryList(): React.ReactElement {
       </Head>
       <CookieBanner />
       <div className="bg-gray">
+<<<<<<< HEAD
         <Header subtitle="وحدات الطرف الثالث" />
+=======
+        <Header subtitle="Third Party Modules" widerContent={true} />
+>>>>>>> 892750b99cc260f8b1b2a4bcea59eab9101dd67c
         <RegistryInstructions
           isOpen={overlayOpen}
           close={() => setOverlayOpen(false)}
@@ -95,6 +99,12 @@ function ThirdPartyRegistryList(): React.ReactElement {
                 Learn more
               </a>
             </div>
+            {/* <div className="mt-8">
+              <ErrorMessage
+                title="Ongoing incident"
+                body="We are currently seeing delays and timeouts during module publishing and search. Serving of already published modules and `std` is not affected. We are working on resolving the problem."
+              />
+            </div> */}
           </div>
           <div className="max-w-screen-lg mx-auto px-4 sm:px-6 md:px-8 mt-8">
             <label htmlFor="query" className="font-medium sr-only">
@@ -490,8 +500,13 @@ function ThirdPartyRegistryList(): React.ReactElement {
                       <a className="link" href="https://doc.deno.land/">
                         توثيق دينو
                       </a>{" "}
+<<<<<<< HEAD
                       كما يمكنك ايضا مشاهدة التوثيق الاساسي. او{" "}
                       <Link href="/[identifier]" as="/std">
+=======
+                      and in the manual. See{" "}
+                      <Link href="/std">
+>>>>>>> 892750b99cc260f8b1b2a4bcea59eab9101dd67c
                         <a className="link">/std</a>
                       </Link>{" "}
                       المخصص للوحدات القياسية.
@@ -611,7 +626,7 @@ function ModuleList({
         const link = `/x/${meta.name}`;
         return (
           <li className={i !== 0 ? "border-t border-gray-200" : ""} key={i}>
-            <Link href="/x/[...rest]" as={link}>
+            <Link href={link}>
               <a className="block hover:bg-gray-50 focus:outline-none focus:bg-gray-50 transition duration-150 ease-in-out">
                 <div className="flex items-center px-4 sm:px-6 py-2">
                   <div className="min-w-0 flex-1 flex items-center">

@@ -29,6 +29,18 @@ for await (const req of s) {
         <title>دينو - بيئة آمنة لتشغيل اكواد جافا سكريبت وتايب سكيبت تتميز </title>
       </Head>
       <CookieBanner />
+      <div className="bg-blue-500 p-4 text-white flex justify-center text-center">
+        <div className="max-w-screen-xl">
+          <span className="inline"> لقد تم اطلاق الاصدار 1.8 من دينو, هل انت مهتم بمعرفة الجديد الذي جاء به ؟</span>
+          <span className="block sm:ml-2 sm:inline-block font-semibold">
+            <Link href="/posts/v1.8">
+              <a>
+                ادخل هنا 
+              </a>
+            </Link>
+          </span>
+        </div>
+      </div>
       <div className="bg-white">
         <div className="bg-gray-50 border-b border-gray-200">
           <Header />
@@ -43,13 +55,6 @@ for await (const req of s) {
               {" "}<strong className="font-semibold">JavaScript</strong>
               {" "} و <strong className="font-semibold">TypeScript</strong>.
             </h2>
-
-            <a
-              href="https://github.com/denoland/deno/releases/latest"
-              className="rounded-full mt-4 px-8 py-2 bg-blue-500 text-white shadow-lg"
-            >
-              {versions.cli[0]}
-            </a>
           </div>
         </div>
         <div className="max-w-screen-sm mx-auto px-4 sm:px-6 md:px-8 mt-20">
@@ -110,9 +115,9 @@ for await (const req of s) {
         </div>
         <div className="max-w-screen-sm mx-auto px-4 sm:px-6 md:px-8">
           <p className="my-4 text-gray-700">
-              لمشاهدة امثلة اخرى وكيفية تهيئة البيئة للتعامل مع دينو يمكنك زيارة صفحة الارشادات
-              <Link href="/[...rest]" as="/manual">
-              <a className="link"> من هنا </a>
+          لمشاهدة امثلة اخرى وكيفية تهيئة البيئة للتعامل مع دينو يمكنك زيارة صفحة الارشادات{" "}
+            <Link href="/manual">
+              <a className="link">من هنا</a>
             </Link>
             .
           </p>
@@ -134,7 +139,7 @@ for await (const req of s) {
           </p>
           <p className="my-4 text-gray-700">
             تأتي دينو مع{" "}
-            <Link href="/[...rest]" as="/manual">
+            <Link href="/manual">
               <a className="link">صفحة ارشادات</a>
             </Link>{" "}
             تحتوي على شرح معمق لبعض الوضائق المعقدة بالإضافة الى شرح المفاهيم التي 
@@ -164,7 +169,7 @@ for await (const req of s) {
           </p>
           <p className="my-4 text-gray-700">
             تتم إستضافة الوحدات القياسية على{" "}
-            <Link href="/[...rest]" as="/std">
+            <Link href="/std">
               <a className="link">deno.land/std</a>
             </Link>{" "}
             ويتم الوصول اليها عن طريق URL's معين مثلها مثل اي وحدات ES لتكون متوافقة للعمل مع دينو
@@ -192,6 +197,10 @@ for await (const req of s) {
             او{" "}
             <a href="https://www.jsdelivr.com/" className="link">
               jsDelivr
+            </a>{" "}
+            or{" "}
+            <a href="https://esm.sh/" className="link">
+              esm.sh
             </a>
             .
           </p>
@@ -281,8 +290,9 @@ const InstallSection = () => {
         <a href="https://crates.io/crates/deno" className="link">
           Cargo
         </a>
+        :
       </p>
-      <CodeBlock language="bash" code={`cargo install deno`} />
+      <CodeBlock language="bash" code={`cargo install deno --locked`} />
     </div>
   );
 

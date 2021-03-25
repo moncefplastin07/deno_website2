@@ -9,7 +9,7 @@ html {
   scroll-behavior: smooth;
   direction: rtl;
 }
-pre, nav{
+pre{
   direction: ltr;
 }
 
