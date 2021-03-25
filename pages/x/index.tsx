@@ -496,13 +496,8 @@ function ThirdPartyRegistryList(): React.ReactElement {
                       <a className="link" href="https://doc.deno.land/">
                         توثيق دينو
                       </a>{" "}
-<<<<<<< HEAD
                       كما يمكنك ايضا مشاهدة التوثيق الاساسي. او{" "}
-                      <Link href="/[identifier]" as="/std">
-=======
-                      and in the manual. See{" "}
                       <Link href="/std">
->>>>>>> 892750b99cc260f8b1b2a4bcea59eab9101dd67c
                         <a className="link">/std</a>
                       </Link>{" "}
                       المخصص للوحدات القياسية.
