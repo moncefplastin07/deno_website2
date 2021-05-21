@@ -215,7 +215,7 @@ for await (const req of s) {
             .
           </p>
           <p className="my-4 text-gray-700">
-            كما توفر دينو ايضا خدمة استظافة عامة لوحدات ES التي تعمل مع دينو
+            كما توفر دينو ايضا خدمة استضافة عامة لوحدات ES التي تعمل مع دينو
             . يمكنك مشاهداتها عبر{" "}
             <Link href="/x">
               <a className="link">deno.land/x</a>
