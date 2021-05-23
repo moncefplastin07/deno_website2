@@ -86,7 +86,7 @@ function ThirdPartyRegistryList(): React.ReactElement {
             </dt>
             <dd className="mt-2">
               <p className="text-base leading-6 text-gray-500">
-                <span className="font-semibold">deno.land/x</span> هي خدمة استظافة شيفرات دينو. تقوم بتخزين نسخ من اصدارات وحدات دينو المرفوعة على جيتهاب للحصول عليها عبر روابط فريدة وسهلة التذكر.
+                <span className="font-semibold">deno.land/x</span> هي خدمة استضافة شيفرات دينو. تقوم بتخزين نسخ من اصدارات وحدات دينو المرفوعة على جيتهاب للحصول عليها عبر روابط فريدة وسهلة التذكر.
               </p>
             </dd>
 
