@@ -46,7 +46,7 @@ function Manual(): React.ReactElement {
   const { version, path } = useMemo(() => {
     const [identifier, ...pathParts] = (query.rest as string[]) ?? [];
     const path = pathParts.length === 0 ? "" : `/${pathParts.join("/")}`;
-    const version = parseNameVersion(identifier ?? "")[1] ?? versionMeta.cli[0];
+    const version = parseNameVersion(identifier ?? "")[1] || versionMeta.cli[0];
     return { version, path: path || "/introduction" };
   }, [query]);
 
@@ -215,7 +215,8 @@ function Manual(): React.ReactElement {
   const stdVersion =
     version === undefined
       ? versionMeta.std[0]
-      : ((versionMeta.cli_to_std as any)[version ?? ""] as string) ?? version;
+      : ((versionMeta.cli_to_std as any)[version ?? ""] as string) ??
+        versionMeta.std[0];
 
   return (
     <div>

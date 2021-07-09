@@ -10,7 +10,7 @@ function Header({
 }: {
   subtitle?: string;
   widerContent?: boolean;
-}): React.ReactElement {
+}): any {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
@@ -59,20 +59,21 @@ function Header({
         </div>
         <div className="hidden lg:flex md:ml-10 items-end">
           <Link href="/#installation">
-            <a className="font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out">
+            <a className="mx-5 font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out">
               التثبيت
             </a>
           </Link>
           <Link href="/manual">
-            <a className="mr-10 font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out">
+            <a className="mx-5 font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out">
               التوثيق
             </a>
           </Link>
-          <Link href="/posts">
-            <a className="ml-10 font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out">
-              الاخبار
-            </a>
-          </Link>
+          <a
+            href="https://deno.com/blog"
+            className="mx-5 font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out"
+          >
+            المدونة
+          </a>
           <a
             href="https://doc.deno.land/builtin/stable"
             className="ml-10 font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out"
@@ -80,12 +81,12 @@ function Header({
             واجهة برمجة التطبيقات
           </a>
           <Link href="/std">
-            <a className="ml-10 font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out">
+            <a className="mx-5 font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out">
               الوحدات القياسية
             </a>
           </Link>
           <Link href="/x">
-            <a className="ml-10 font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out">
+            <a className="mx-5 font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out">
               وحدات الطرف الثالث
             </a>
           </Link>
@@ -176,9 +177,9 @@ function Header({
                     توثيق
                   </a>
                 </Link>
-                <Link href="/posts">
+                <Link href="https://deno.com/blog">
                   <a className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out">
-                    اخبار
+                    المدونة
                   </a>
                 </Link>
                 <a
