@@ -12,16 +12,15 @@ function TranslationsPage(): React.ReactElement {
   return (
     <>
       <Head>
-        <title>Translations | Deno</title>
+        <title>ترجمات | Deno</title>
       </Head>
       <CookieBanner />
       <Header />
       <div className="max-w-screen-xl mx-auto px-4 sm:px-6 md:px-8 mt-8 mb-24">
         <div className="max-w-screen-lg mx-auto">
-          <h4 className="text-4xl font-bold tracking-tight">Translations</h4>
+          <h4 className="text-4xl font-bold tracking-tight">الموقع بلغات اخرى</h4>
           <p className="mt-4 text-lg">
-            يتوفر توثيق دينو بالللغات التالية. هل تريد المساهمة بترجمة التوثيق الى لغة ما؟?{" "}
-            <a
+            يتوفر توثيق دينو بالللغات التالية. هل تريد المساهمة بترجمة التوثيق الى لغة ما؟{" "}            <a
               href="https://github.com/denoland/deno_website2/blob/main/translations.json"
               className="link"
             >
