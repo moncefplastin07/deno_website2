@@ -6,7 +6,7 @@ function NotFoundPage(): React.ReactElement {
   return (
     <div className="NotFoundPage">
       <div id="flex-top">
-        <Header />
+        <Header widerContent={true}/>
         <header>
           <h1 className="font-extrabold text-5xl leading-10 tracking-tight text-gray-900">
             404
